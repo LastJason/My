@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<all>
+<language>
+  <lang langid="zh"/>
+  <lang langid="en"/>
+  <lang langid="es"/>
+  <lang langid="ko"/>
+</language>
+<tryanimal>
+  <animal name="elephant"/>
+  <animal name="bear"/>
+  <animal name="camel"/>
+  <animal name="cat"/>
+  <animal name="dog"/>
+</tryanimal>
+
+<fixrotation>
+<animal name="bat" rotation="0"/>
+   <animal name="white_bear" rotation="90"/>
+   <animal name="shrimp" rotation="90"/>
+   <animal name="lobster" rotation="0"/>
+   <animal name="crab" rotation="0"/>
+   <animal name="dragonfly" rotation="0"/>
+   <animal name="ladybrid" rotation="0"/>
+   <animal name="beetle" rotation="0"/>
+   <animal name="cockroach" rotation="0"/>
+   <animal name="ant" rotation="0"/>
+   <animal name="mosquito" rotation="0"/>
+   <animal name="fly" rotation="0"/>
+   <animal name="leopard" rotation="-90"/>
+   <animal name="donkey" rotation="-90"/>
+   <animal name="monkey" rotation="180"/>
+   <animal name="panda" rotation="-90"/>
+   <animal name="seaturtle" rotation="180"/>
+   <animal name="horse" rotation="90"/>
+   <animal name="conch" rotation="180"/>
+   <animal name="penguin" rotation="180"/>
+   <animal name="neo_bear" rotation="180"/>
+   <animal name="owl" rotation="180"/>
+   <animal name="peacock" rotation="180"/>
+   <animal name="spider" rotation="-90"/>
+   <animal name="eel" rotation="90"/>
+   <animal name="anteater" rotation="90"/>
+   <animal name="platypus" rotation="90"/>
+   <animal name="rhino" rotation="90"/>
+   <animal name="antelope" rotation="90"/>
+   <animal name="gecko" rotation="90"/>
+   <animal name="squirrel" rotation="90"/>
+   <animal name="kangaroo" rotation="90"/>
+   <animal name="swan" rotation="90"/>
+   <animal name="crocodile" rotation="90"/>
+   <animal name="sealion" rotation="90"/>
+   <animal name="brid" rotation="90"/>
+   <animal name="hen" rotation="90"/>
+   <animal name="snail" rotation="90"/>
+   <animal name="butterfly" rotation="180"/>   
+   <animal name="koala" rotation="180"/>
+   <animal name="raccoon" rotation="90"/>
+   <animal name="bear" rotation="180"/>
+   <animal name="dog" rotation="90"/>
+   <animal name="cat" rotation="90"/>
+   <animal name="fox" rotation="180"/>
+   <animal name="gorilla" rotation="180"/>
+   <animal name="eagle" rotation="90"/>
+  
+</fixrotation>
+
+  <audio>
+    <animal name="bear">
+      <Local langid="en" path="lang/audio/animal1/bear_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/bear_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/bear_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/bear_zh.mp3" />
+    </animal>
+    <animal name="camel">
+      <Local langid="en" path="lang/audio/animal1/camel_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/camel_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/camel_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/camel_zh.mp3" />
+    </animal>
+    <animal name="cat">
+      <Local langid="en" path="lang/audio/animal1/cat_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/cat_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/cat_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/cat_zh.mp3" />
+    </animal>
+    <animal name="dog">
+      <Local langid="en" path="lang/audio/animal1/dog_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/dog_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/dog_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/dog_zh.mp3" />
+    </animal>
+    <animal name="donkey">
+      <Local langid="en" path="lang/audio/animal1/donkey_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/donkey_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/donkey_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/donkey_zh.mp3" />
+    </animal>
+    <animal name="fox">
+      <Local langid="en" path="lang/audio/animal1/fox_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/fox_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/fox_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/fox_zh.mp3" />
+    </animal>
+    <animal name="gorilla">
+      <Local langid="en" path="lang/audio/animal1/gorilla_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/gorilla_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/gorilla_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/gorilla_zh.mp3" />
+    </animal>
+    <animal name="horse">
+      <Local langid="en" path="lang/audio/animal1/horse_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/horse_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/horse_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/horse_zh.mp3" />
+    </animal>
+    <animal name="hyena">
+      <Local langid="en" path="lang/audio/animal1/hyena_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/hyena_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/hyena_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/hyena_zh.mp3" />
+    </animal>
+    <animal name="kangaroo">
+      <Local langid="en" path="lang/audio/animal1/kangaroo_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/kangaroo_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/kangaroo_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/kangaroo_zh.mp3" />
+    </animal>
+    <animal name="koala">
+      <Local langid="en" path="lang/audio/animal1/koala_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/koala_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/koala_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/koala_zh.mp3" />
+    </animal>
+    <animal name="leopard">
+      <Local langid="en" path="lang/audio/animal1/leopard_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/leopard_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/leopard_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/leopard_zh.mp3" />
+    </animal>
+    <animal name="lion">
+      <Local langid="en" path="lang/audio/animal1/lion_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/lion_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/lion_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/lion_zh.mp3" />
+    </animal>
+    <animal name="monkey">
+      <Local langid="en" path="lang/audio/animal1/monkey_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/monkey_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/monkey_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/monkey_zh.mp3" />
+    </animal>
+    <animal name="mouse">
+      <Local langid="en" path="lang/audio/animal1/mouse_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/mouse_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/mouse_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/mouse_zh.mp3" />
+    </animal>
+    <animal name="neo_bear">
+      <Local langid="en" path="lang/audio/animal1/neo_bear_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/neo_bear_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/neo_bear_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/neo_bear_zh.mp3" />
+    </animal>
+    <animal name="polar_bear">
+      <Local langid="en" path="lang/audio/animal1/polar_bear_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/polar_bear_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/polar_bear_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/polar_bear_zh.mp3" />
+    </animal>
+    <animal name="rabbit">
+      <Local langid="en" path="lang/audio/animal1/rabbit_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/rabbit_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/rabbit_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/rabbit_zh.mp3" />
+    </animal>
+    <animal name="raccoon">
+      <Local langid="en" path="lang/audio/animal1/raccoon_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/raccoon_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/raccoon_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/raccoon_zh.mp3" />
+    </animal>
+    <animal name="squirrel">
+      <Local langid="en" path="lang/audio/animal1/squirrel_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/squirrel_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/squirrel_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/squirrel_zh.mp3" />
+    </animal>
+    <animal name="tiger">
+      <Local langid="en" path="lang/audio/animal1/tiger_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/tiger_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/tiger_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/tiger_zh.mp3" />
+    </animal>
+    <animal name="weasel">
+      <Local langid="en" path="lang/audio/animal1/weasel_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/weasel_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/weasel_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/weasel_zh.mp3" />
+    </animal>
+    <animal name="white_bear">
+      <Local langid="en" path="lang/audio/animal1/white_bear_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/white_bear_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/white_bear_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/white_bear_zh.mp3" />
+    </animal>
+    <animal name="wolf">
+      <Local langid="en" path="lang/audio/animal1/wolf_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/wolf_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/wolf_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/wolf_zh.mp3" />
+    </animal>
+    <animal name="zabra">
+      <Local langid="en" path="lang/audio/animal1/zabra_en.mp3" />
+      <Local langid="es" path="lang/audio/animal1/zabra_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal1/zabra_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal1/zabra_zh.mp3" />
+    </animal>
+    <animal name="anteater">
+      <Local langid="en" path="lang/audio/animal2/anteater_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/anteater_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/anteater_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/anteater_zh.mp3" />
+    </animal>
+    <animal name="antelope">
+      <Local langid="en" path="lang/audio/animal2/antelope_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/antelope_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/antelope_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/antelope_zh.mp3" />
+    </animal>
+    <animal name="bat">
+      <Local langid="en" path="lang/audio/animal2/bat_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/bat_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/bat_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/bat_zh.mp3" />
+    </animal>
+    <animal name="cattle">
+      <Local langid="en" path="lang/audio/animal2/cattle_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/cattle_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/cattle_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/cattle_zh.mp3" />
+    </animal>
+    <animal name="cow">
+      <Local langid="en" path="lang/audio/animal2/cow_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/cow_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/cow_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/cow_zh.mp3" />
+    </animal>
+    <animal name="deer">
+      <Local langid="en" path="lang/audio/animal2/deer_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/deer_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/deer_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/deer_zh.mp3" />
+    </animal>
+    <animal name="dinosaur">
+      <Local langid="en" path="lang/audio/animal2/dinosaur_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/dinosaur_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/dinosaur_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/dinosaur_zh.mp3" />
+    </animal>
+    <animal name="dragon">
+      <Local langid="en" path="lang/audio/animal2/dragon_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/dragon_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/dragon_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/dragon_zh.mp3" />
+    </animal>
+    <animal name="elephant">
+      <Local langid="en" path="lang/audio/animal2/elephant_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/elephant_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/elephant_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/elephant_zh.mp3" />
+    </animal>
+    <animal name="gecko">
+      <Local langid="en" path="lang/audio/animal2/gecko_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/gecko_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/gecko_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/gecko_zh.mp3" />
+    </animal>
+    <animal name="giraffe">
+      <Local langid="en" path="lang/audio/animal2/giraffe_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/giraffe_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/giraffe_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/giraffe_zh.mp3" />
+    </animal>
+    <animal name="goat">
+      <Local langid="en" path="lang/audio/animal2/goat_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/goat_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/goat_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/goat_zh.mp3" />
+    </animal>
+    <animal name="hedgehog">
+      <Local langid="en" path="lang/audio/animal2/hedgehog_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/hedgehog_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/hedgehog_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/hedgehog_zh.mp3" />
+    </animal>
+    <animal name="hippo">
+      <Local langid="en" path="lang/audio/animal2/hippo_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/hippo_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/hippo_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/hippo_zh.mp3" />
+    </animal>
+    <animal name="lizard">
+      <Local langid="en" path="lang/audio/animal2/lizard_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/lizard_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/lizard_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/lizard_zh.mp3" />
+    </animal>
+    <animal name="mole">
+      <Local langid="en" path="lang/audio/animal2/mole_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/mole_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/mole_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/mole_zh.mp3" />
+    </animal>
+    <animal name="panda">
+      <Local langid="en" path="lang/audio/animal2/panda_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/panda_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/panda_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/panda_zh.mp3" />
+    </animal>
+    <animal name="pangolin">
+      <Local langid="en" path="lang/audio/animal2/pangolins_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/pangolins_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/pangolins_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/pangolins_zh.mp3" />
+    </animal>
+    <animal name="pig">
+      <Local langid="en" path="lang/audio/animal2/pig_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/pig_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/pig_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/pig_zh.mp3" />
+    </animal>
+    <animal name="platypus">
+      <Local langid="en" path="lang/audio/animal2/platypus_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/platypus_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/platypus_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/platypus_zh.mp3" />
+    </animal>
+    <animal name="rhino">
+      <Local langid="en" path="lang/audio/animal2/rhino_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/rhino_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/rhino_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/rhino_zh.mp3" />
+    </animal>
+    <animal name="sheep">
+      <Local langid="en" path="lang/audio/animal2/sheep_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/sheep_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/sheep_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/sheep_zh.mp3" />
+    </animal>
+    <animal name="snake">
+      <Local langid="en" path="lang/audio/animal2/snake_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/snake_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/snake_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/snake_zh.mp3" />
+    </animal>
+    <animal name="tortoise">
+      <Local langid="en" path="lang/audio/animal2/tortoise_en.mp3" />
+      <Local langid="es" path="lang/audio/animal2/tortoise_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal2/tortoise_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal2/tortoise_zh.mp3" />
+    </animal>
+    <animal name="conch">
+      <Local langid="en" path="lang/audio/animal3/conch_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/conch_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/conch_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/conch_zh.mp3" />
+    </animal>
+    <animal name="crab">
+      <Local langid="en" path="lang/audio/animal3/crab_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/crab_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/crab_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/crab_zh.mp3" />
+    </animal>
+    <animal name="crocodile">
+      <Local langid="en" path="lang/audio/animal3/crocodile_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/crocodile_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/crocodile_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/crocodile_zh.mp3" />
+    </animal>
+    <animal name="dolphin">
+      <Local langid="en" path="lang/audio/animal3/dolphin_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/dolphin_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/dolphin_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/dolphin_zh.mp3" />
+    </animal>
+    <animal name="duck">
+      <Local langid="en" path="lang/audio/animal3/duck_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/duck_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/duck_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/duck_zh.mp3" />
+    </animal>
+    <animal name="eel">
+      <Local langid="en" path="lang/audio/animal3/eel_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/eel_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/eel_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/eel_zh.mp3" />
+    </animal>
+    <animal name="frog">
+      <Local langid="en" path="lang/audio/animal3/frog_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/frog_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/frog_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/frog_zh.mp3" />
+    </animal>
+    <animal name="inkfish">
+      <Local langid="en" path="lang/audio/animal3/inkfish_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/inkfish_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/inkfish_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/inkfish_zh.mp3" />
+    </animal>
+    <animal name="jellyfish">
+      <Local langid="en" path="lang/audio/animal3/jellyfish_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/jellyfish_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/jellyfish_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/jellyfish_zh.mp3" />
+    </animal>
+    <animal name="lobster">
+      <Local langid="en" path="lang/audio/animal3/lobster_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/lobster_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/lobster_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/lobster_zh.mp3" />
+    </animal>
+    <animal name="octopus">
+      <Local langid="en" path="lang/audio/animal3/octopus_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/octopus_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/octopus_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/octopus_zh.mp3" />
+    </animal>
+    <animal name="penguin">
+      <Local langid="en" path="lang/audio/animal3/penguin_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/penguin_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/penguin_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/penguin_zh.mp3" />
+    </animal>
+    <animal name="seagull">
+      <Local langid="en" path="lang/audio/animal3/seagull_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/seagull_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/seagull_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/seagull_zh.mp3" />
+    </animal>
+    <animal name="seahorse">
+      <Local langid="en" path="lang/audio/animal3/seahorse_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/seahorse_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/seahorse_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/seahorse_zh.mp3" />
+    </animal>
+    <animal name="sealion">
+      <Local langid="en" path="lang/audio/animal3/sealion_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/sealion_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/sealion_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/sealion_zh.mp3" />
+    </animal>
+    <animal name="seal">
+      <Local langid="en" path="lang/audio/animal3/seal_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/seal_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/seal_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/seal_zh.mp3" />
+    </animal>
+    <animal name="seaturtle">
+      <Local langid="en" path="lang/audio/animal3/seaturtle_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/seaturtle_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/seaturtle_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/seaturtle_zh.mp3" />
+    </animal>
+    <animal name="shark">
+      <Local langid="en" path="lang/audio/animal3/shark_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/shark_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/shark_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/shark_zh.mp3" />
+    </animal>
+    <animal name="shrimp">
+      <Local langid="en" path="lang/audio/animal3/shrimp_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/shrimp_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/shrimp_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/shrimp_zh.mp3" />
+    </animal>
+    <animal name="starfish">
+      <Local langid="en" path="lang/audio/animal3/starfish_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/starfish_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/starfish_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/starfish_zh.mp3" />
+    </animal>
+    <animal name="swan">
+      <Local langid="en" path="lang/audio/animal3/swan_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/swan_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/swan_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/swan_zh.mp3" />
+    </animal>
+    <animal name="walrus">
+      <Local langid="en" path="lang/audio/animal3/walrus_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/walrus_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/walrus_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/walrus_zh.mp3" />
+    </animal>
+    <animal name="whale">
+      <Local langid="en" path="lang/audio/animal3/whale_en.mp3" />
+      <Local langid="es" path="lang/audio/animal3/whale_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal3/whale_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal3/whale_zh.mp3" />
+    </animal>
+    <animal name="ant">
+      <Local langid="en" path="lang/audio/animal4/ant_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/ant_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/ant_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/ant_zh.mp3" />
+    </animal>
+    <animal name="beetle">
+      <Local langid="en" path="lang/audio/animal4/beetle_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/beetle_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/beetle_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/beetle_zh.mp3" />
+    </animal>
+    <animal name="bee">
+      <Local langid="en" path="lang/audio/animal4/bee_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/bee_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/bee_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/bee_zh.mp3" />
+    </animal>
+    <animal name="brid">
+      <Local langid="en" path="lang/audio/animal4/brid_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/brid_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/brid_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/brid_zh.mp3" />
+    </animal>
+    <animal name="butterfly">
+      <Local langid="en" path="lang/audio/animal4/butterfly_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/butterfly_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/butterfly_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/butterfly_zh.mp3" />
+    </animal>
+    <animal name="cockroach">
+      <Local langid="en" path="lang/audio/animal4/cockroach_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/cockroach_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/cockroach_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/cockroach_zh.mp3" />
+    </animal>
+    <animal name="cock">
+      <Local langid="en" path="lang/audio/animal4/cock_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/cock_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/cock_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/cock_zh.mp3" />
+    </animal>
+    <animal name="crane">
+      <Local langid="en" path="lang/audio/animal4/crane_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/crane_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/crane_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/crane_zh.mp3" />
+    </animal>
+    <animal name="crow">
+      <Local langid="en" path="lang/audio/animal4/crow_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/crow_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/crow_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/crow_zh.mp3" />
+    </animal>
+    <animal name="dragonfly">
+      <Local langid="en" path="lang/audio/animal4/dragonfly_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/dragonfly_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/dragonfly_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/dragonfly_zh.mp3" />
+    </animal>
+    <animal name="eagle">
+      <Local langid="en" path="lang/audio/animal4/eagle_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/eagle_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/eagle_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/eagle_zh.mp3" />
+    </animal>
+    <animal name="fly">
+      <Local langid="en" path="lang/audio/animal4/fly_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/fly_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/fly_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/fly_zh.mp3" />
+    </animal>
+    <animal name="hen">
+      <Local langid="en" path="lang/audio/animal4/hen_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/hen_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/hen_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/hen_zh.mp3" />
+    </animal>
+    <animal name="ladybrid">
+      <Local langid="en" path="lang/audio/animal4/ladybrid_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/ladybrid_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/ladybrid_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/ladybrid_zh.mp3" />
+    </animal>
+    <animal name="locust">
+      <Local langid="en" path="lang/audio/animal4/locust_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/locust_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/locust_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/locust_zh.mp3" />
+    </animal>
+    <animal name="mantis">
+      <Local langid="en" path="lang/audio/animal4/mantis_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/mantis_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/mantis_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/mantis_zh.mp3" />
+    </animal>
+    <animal name="mosquito">
+      <Local langid="en" path="lang/audio/animal4/mosquito_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/mosquito_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/mosquito_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/mosquito_zh.mp3" />
+    </animal>
+    <animal name="ostrich">
+      <Local langid="en" path="lang/audio/animal4/ostrich_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/ostrich_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/ostrich_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/ostrich_zh.mp3" />
+    </animal>
+    <animal name="owl">
+      <Local langid="en" path="lang/audio/animal4/owl_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/owl_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/owl_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/owl_zh.mp3" />
+    </animal>
+    <animal name="parrot">
+      <Local langid="en" path="lang/audio/animal4/parrot_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/parrot_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/parrot_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/parrot_zh.mp3" />
+    </animal>
+    <animal name="peacock">
+      <Local langid="en" path="lang/audio/animal4/peacock_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/peacock_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/peacock_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/peacock_zh.mp3" />
+    </animal>
+    <animal name="pigeon">
+      <Local langid="en" path="lang/audio/animal4/pigeon_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/pigeon_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/pigeon_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/pigeon_zh.mp3" />
+    </animal>
+    <animal name="snail">
+      <Local langid="en" path="lang/audio/animal4/snail_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/snail_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/snail_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/snail_zh.mp3" />
+    </animal>
+    <animal name="spider">
+      <Local langid="en" path="lang/audio/animal4/spider_en.mp3" />
+      <Local langid="es" path="lang/audio/animal4/spider_es.mp3" />
+      <Local langid="ko" path="lang/audio/animal4/spider_ko.mp3" />
+      <Local langid="zh" path="lang/audio/animal4/spider_zh.mp3" />
+    </animal>
+  </audio>
+
+<uitext>
+	<MsgID id = "0">
+		<Local langid = "zh" Content = "开始"/>
+		<Local langid = "en" Content = "Start"/>
+		<Local langid = "es" Content = "Comenzar"/>
+		<Local langid = "ko" Content = "시작"/>
+	</MsgID>
+	<MsgID id = "1">
+		<Local langid = "zh" Content = "动画"/>
+		<Local langid = "en" Content = "Animation"/>
+		<Local langid = "es" Content = "Animación"/>
+		<Local langid = "ko" Content = "애니메이션"/>
+	</MsgID>
+	<MsgID id = "2">
+		<Local langid = "zh" Content = "打印"/>
+		<Local langid = "en" Content = "Print"/>
+		<Local langid = "es" Content = "Imprimir"/>
+		<Local langid = "ko" Content = "프린트"/>
+	</MsgID>
+	<MsgID id = "3">
+		<Local langid = "zh" Content = "预览"/>
+		<Local langid = "en" Content = "Preview"/>
+		<Local langid = "es" Content = "Prever"/>
+		<Local langid = "ko" Content = "미리보기"/>
+	</MsgID>	
+	<MsgID id = "4">
+		<Local langid = "zh" Content = "扫描'激活二维码'"/>
+		<Local langid = "en" Content = "Scan the QR code."/>
+		<Local langid = "es" Content = "Escanea el Código Bidimensional de Activación"/>
+		<Local langid = "ko" Content = "’활성화 QR코드‘를 스캔하세요"/>
+	</MsgID>
+	<MsgID id = "5">
+		<Local langid = "zh" Content = "选择常用发音"/>
+		<Local langid = "en" Content = "Choose Preferred Languages"/>
+		<Local langid = "es" Content = "Seleccionar la pronunciación común"/>
+		<Local langid = "ko" Content = "상용언어를 선택하세요"/>
+	</MsgID>
+	<MsgID id = "6">
+		<Local langid = "zh" Content = "点击选择当前语言"/>
+		<Local langid = "en" Content = "click to select current language."/>
+		<Local langid = "es" Content = "selecciona sistema del idioma."/>
+		<Local langid = "ko" Content = ""/>
+	</MsgID>
+	<MsgID id = "7">
+		<Local langid = "zh" Content = "未购买"/>
+		<Local langid = "en" Content = "not buyed"/>
+		<Local langid = "es" Content = "not buyed"/>
+		<Local langid = "ko" Content = ""/>
+	</MsgID>
+	<MsgID id = "8">
+		<Local langid = "zh" Content = "请访问 www.neobear.com/m.html下载并打印卡片"/>
+		<Local langid = "en" Content = "For free trial, please access www.neobear.com/m.html  to download and print the demo cards."/>
+		<Local langid = "es" Content = "Visita www.neobear.com/m.html para descargar e imprimir las tarjetas."/>
+		<Local langid = "ko" Content = "www.neobear.com/m.html 를 방문하여 카드를 다운 및 프린트하세요."/>
+	</MsgID>
+	<MsgID id = "9">
+		<Local langid = "zh" Content = "确定购买?"/>
+		<Local langid = "en" Content = "Are you sure to buy?"/>
+		<Local langid = "es" Content = "Are you sure to buy?"/>
+		<Local langid = "ko" Content = ""/>
+	</MsgID>
+	<MsgID id = "10">
+		<Local langid = "zh" Content = "购买成功!"/>
+		<Local langid = "en" Content = "Sucess!"/>
+		<Local langid = "es" Content = "Sucess!"/>
+		<Local langid = "ko" Content = ""/>
+	</MsgID>
+	<MsgID id = "11">
+		<Local langid = "zh" Content = "帮助"/>
+		<Local langid = "en" Content = "Help"/>
+		<Local langid = "es" Content = "Ayuda"/>
+		<Local langid = "ko" Content = "도움말"/>
+	</MsgID>
+  <MsgID id = "12">
+    <Local langid = "zh" Content = "恭喜，激活成功啦！"/>
+    <Local langid = "en" Content = "Congratulations，activation succeed!"/>
+    <Local langid = "es" Content = "Felicitación, está activado!"/>
+	<Local langid = "ko" Content = "축하드립니다. 성공적으로 활성화하셨습니다!"/>
+  </MsgID>
+  <MsgID id = "13">
+    <Local langid = "zh" Content = "很抱歉，激活失败了！"/>
+    <Local langid = "en" Content = "Sorry， activation failed!"/>
+    <Local langid = "es" Content = "Perdón, no está activado!"/>
+	<Local langid = "ko" Content = "죄송합니다. 활성화에 실패했습니다."/>
+  </MsgID>
+  <MsgID id = "14">
+    <Local langid = "zh" Content = "你已经成功激活了X台设备，还可以再激活Y台设备。"/>
+    <Local langid = "en" Content = "X devices have beened activated, Y more divices can be activated."/>
+    <Local langid = "es" Content = "Usted ha activado X unidades de dispositivo y aún puede activar Y unidades de dispositivos además."/>
+	<Local langid = "ko" Content = "귀하는 이미 X대 장치의 활성화에 성공하였으며, Y대 장치를 더 활성화 할 수 있습니다."/>
+  </MsgID>
+  <MsgID id = "15">
+    <Local langid = "zh" Content = "你已经成功激活了"/>
+    <Local langid = "en" Content = ""/>
+    <Local langid = "es" Content = "Usted ha activado "/>
+	<Local langid = "ko" Content = "귀하는 이미"/>
+  </MsgID>
+  <MsgID id = "16">
+    <Local langid = "zh" Content = "台设备，还可以再激活"/>
+    <Local langid = "en" Content = " devices have beened activated,  "/>
+    <Local langid = "es" Content = " unidades de dispositivo y aún puede activar "/>
+	<Local langid = "ko" Content = "대 장치의 활성화에 성공하였으며, "/>
+  </MsgID>
+  <MsgID id = "17">
+    <Local langid = "zh" Content = "台设备。"/>
+    <Local langid = "en" Content = " more divices can be activated."/>
+    <Local langid = "es" Content = " unidades de dispositivos además."/>
+	<Local langid = "ko" Content = "대 장치를 더 활성화 할 수 있습니다."/>
+  </MsgID>
+  <MsgID id = "18">
+    <Local langid = "zh" Content = "正在激活中，请稍等。"/>
+    <Local langid = "en" Content = "Activating, please wait..."/>
+    <Local langid = "es" Content = "Están activando,¡ espere un momento..."/>
+	<Local langid = "ko" Content = "활성화 중입니다. 잠시만 기다려 주십시오! "/>
+  </MsgID>
+  <MsgID id = "19">
+    <Local langid = "zh" Content = "很抱歉！激活失败了！你当前的网络状态不佳，请稍后再试。"/>
+    <Local langid = "en" Content = "Sorry， activation failed！Please check the network connection and try again."/>
+    <Local langid = "es" Content = "Perdón! ¡ No está activado! El estado de su red actual es inadecuado, re-intente un momento después."/>
+	<Local langid = "ko" Content = "죄송합니다! 활성화에 실패했습니다! 현재 네트워크 상태가 좋지 않기 때문에 잠시 후 다시 시도하십시오."/>
+ </MsgID>
+  <MsgID id = "20">
+    <Local langid = "zh" Content = "很抱歉，当前激活码已经超过激活次数的上限啦！请联系你的服务商寻求帮助。"/>
+    <Local langid = "en" Content = "Sorry，activation count has reached its limit. Please contact your local dealer."/>
+    <Local langid = "es" Content = "Perdón, ¡se excede el límite de activación del código de activación actual ! Contacte a su proveedor de servicio por ayuda."/>
+	<Local langid = "ko" Content = "죄송합니다. 최대 활성화 횟수를 초과했습니다! 서비스 제공업체에 문의하시기 바랍니다."/>
+  </MsgID>
+  <MsgID id = "21">
+    <Local langid = "zh" Content = "很抱歉，当前激活码不存在,无法完成激活！请联系你的服务商寻求帮助。"/>
+    <Local langid = "en" Content = "Sorry,  this activation code does not exist. Please contact your local dealer."/>
+    <Local langid = "es" Content = "Perdón, ¡ El código de activación actual no existe, por lo cual no puede activarse! Contacte a su proveedor de servicio por ayuda."/>
+    <Local langid = "ko" Content = "죄송합니. 존재하지 않는 활성화 코드이므로 활성화할 수 없습니다! 서비스 제공업체에 문의하시기 바랍니다."/>
+  </MsgID>
+  <MsgID id = "22">
+    <Local langid = "zh" Content = "正版验证"/>
+    <Local langid = "en" Content = "©Verification"/>
+    <Local langid = "es" Content = "Derecho de autor"/>
+	<Local langid = "ko" Content = "정품 인증"/>
+  </MsgID>
+  <MsgID id = "23">
+    <Local langid = "zh" Content = "请访问官方网站了解更多信息: www.neobear.com
+
+是否现在进行正版验证?"/>
+    <Local langid = "en" Content = "Please visit our website for more information: www.neobear.com
+
+Verify copyright now?"/>
+    <Local langid = "es" Content = "Por favor visite nuestro sitio web por más información en: www.neobear.com.
+
+Quiere validar el derecho de autor ahora"/>
+	<Local langid = "ko" Content = "www.neobear.com 공식 웹사이트를 방문하여 자세한 내용을 확인하십시요. 
+	
+	이제 정품 인증을하시겠습니까?"/>
+  </MsgID>
+  <MsgID id = "24">
+    <Local langid = "zh" Content = "是"/>
+    <Local langid = "en" Content = "Yes"/>
+    <Local langid = "es" Content = "sí"/>
+	<Local langid = "ko" Content = "예"/>
+  </MsgID>
+  <MsgID id = "25">
+    <Local langid = "zh" Content = "否"/>
+    <Local langid = "en" Content = "No"/>
+    <Local langid = "es" Content = "no"/>
+	<Local langid = "ko" Content = "아니오"/>
+ </MsgID>
+  <MsgID id = "26">
+    <Local langid = "zh" Content = "选择分享方式"/>
+    <Local langid = "en" Content = "Choose Social Channels"/>
+    <Local langid = "es" Content = "Seleccionar medio compartir"/>
+	<Local langid = "ko" Content = "공유 채널을 선택"/>
+  </MsgID>
+ 
+  <MsgID id = "27">
+    <Local langid = "zh" Content = "禁用录像和分享功能"/>
+    <Local langid = "en" Content = "Disable video recording"/>
+    <Local langid = "es" Content = "Desactivar la grabación de vídeo"/>
+	<Local langid = "ko" Content = "녹화 기능을 사용하지 않기"/>
+  </MsgID>
+   <MsgID id = "28">
+    <Local langid = "zh" Content = "(重启应用后生效)"/>
+    <Local langid = "en" Content = "(Only Effective After Restart)"/>
+    <Local langid = "es" Content = "(Validará tras reiniciar aplicación)"/>
+	<Local langid = "ko" Content = "(APP을 다시 실행하면 사용할 수 있습니다.)"/>
+  </MsgID>
+  
+  <MsgID id = "29">
+    <Local langid = "zh" Content = "需要访问您的相机才能正常工作，请前往操作系统的设置页面进行修改"/>
+    <Local langid = "en" Content = "needs permission to access your device's camera, please make the change in your system settings."/>
+    <Local langid = "es" Content = "necesita permiso para acceder a la cámara del dispositivo, por favor realizar el cambio en la configuración del sistema."/>
+    <Local langid = "ko" Content = "기기의 카메라에 액세스 할 수있는 권한이 필요합니다, 시스템 설정의 변화를 확인하시기 바랍니다"/>
+  </MsgID>
+</uitext>
+
+<roar>
+  <animal name="bear" roar_path="lang/roar/animal1/bear.mp3" />
+  <animal name="camel" roar_path="lang/roar/animal1/camel.mp3" />
+  <animal name="cat" roar_path="lang/roar/animal1/cat.mp3" />
+  <animal name="dog" roar_path="lang/roar/animal1/dog.mp3" />
+  <animal name="donkey" roar_path="lang/roar/animal1/donkey.mp3" />
+  <animal name="fox" roar_path="lang/roar/animal1/fox.mp3" />
+  <animal name="gorilla" roar_path="lang/roar/animal1/gorilla.mp3" />
+  <animal name="horse" roar_path="lang/roar/animal1/horse.mp3" />
+  <animal name="hyena" roar_path="lang/roar/animal1/hyena.mp3" />
+  <animal name="leopard" roar_path="lang/roar/animal1/leopard.mp3" />
+  <animal name="lion" roar_path="lang/roar/animal1/lion.mp3" />
+  <animal name="monkey" roar_path="lang/roar/animal1/monkey.mp3" />
+  <animal name="mouse" roar_path="lang/roar/animal1/mouse.mp3" />
+  <animal name="polar_bear" roar_path="lang/roar/animal1/polar_bear.mp3" />
+  <animal name="rabbit" roar_path="lang/roar/animal1/rabbit.mp3" />
+  <animal name="raccoon" roar_path="lang/roar/animal1/raccoon.mp3" />
+  <animal name="squirrel" roar_path="lang/roar/animal1/squirrel.mp3" />
+  <animal name="tiger" roar_path="lang/roar/animal1/tiger.mp3" />
+  <animal name="weasel" roar_path="lang/roar/animal1/weasel.mp3" />
+  <animal name="wolf" roar_path="lang/roar/animal1/wolf.mp3" />
+  <animal name="zabra" roar_path="lang/roar/animal1/zabra.mp3" />
+  <animal name="bat" roar_path="lang/roar/animal2/bat.mp3" />
+  <animal name="cattle" roar_path="lang/roar/animal2/cattle.mp3" />
+  <animal name="cecko" roar_path="lang/roar/animal2/cecko.mp3" />
+  <animal name="cow" roar_path="lang/roar/animal2/cow.mp3" />
+  <animal name="deer" roar_path="lang/roar/animal2/deer.mp3" />
+  <animal name="dinosaur" roar_path="lang/roar/animal2/dinosaur.mp3" />
+  <animal name="dragon" roar_path="lang/roar/animal2/dragon.mp3" />
+  <animal name="elephant" roar_path="lang/roar/animal2/elephant.mp3" />
+  <animal name="goat" roar_path="lang/roar/animal2/goat.mp3" />
+  <animal name="hippo" roar_path="lang/roar/animal2/hippo.mp3" />
+  <animal name="panda" roar_path="lang/roar/animal2/panda.mp3" />
+  <animal name="pangolin" roar_path="lang/roar/animal2/pangolin.mp3" />
+  <animal name="pig" roar_path="lang/roar/animal2/pig.mp3" />
+  <animal name="rhino" roar_path="lang/roar/animal2/rhino.mp3" />
+  <animal name="sheep" roar_path="lang/roar/animal2/sheep.mp3" />
+  <animal name="snake" roar_path="lang/roar/animal2/snake.mp3" />
+  <animal name="conch" roar_path="lang/roar/animal3/conch.mp3" />
+  <animal name="crab" roar_path="lang/roar/animal3/crab.mp3" />
+  <animal name="crocodile" roar_path="lang/roar/animal3/crocodile.mp3" />
+  <animal name="dolphin" roar_path="lang/roar/animal3/dolphin.mp3" />
+  <animal name="duck" roar_path="lang/roar/animal3/duck.mp3" />
+  <animal name="eel" roar_path="lang/roar/animal3/eel.mp3" />
+  <animal name="frog" roar_path="lang/roar/animal3/frog.mp3" />
+  <animal name="inkfish" roar_path="lang/roar/animal3/inkfish.mp3" />
+  <animal name="jellyfish" roar_path="lang/roar/animal3/jellyfish.mp3" />
+  <animal name="lobster" roar_path="lang/roar/animal3/lobster.mp3" />
+  <animal name="octopus" roar_path="lang/roar/animal3/octopus.mp3" />
+  <animal name="penguim" roar_path="lang/roar/animal3/penguim.mp3" />
+  <animal name="seagull" roar_path="lang/roar/animal3/seagull.mp3" />
+  <animal name="seahorse" roar_path="lang/roar/animal3/seahorse.mp3" />
+  <animal name="seal" roar_path="lang/roar/animal3/seal.mp3" />
+  <animal name="sealion" roar_path="lang/roar/animal3/sealion.mp3" />
+  <animal name="seaturtle" roar_path="lang/roar/animal3/seaturtle.mp3" />
+  <animal name="shark" roar_path="lang/roar/animal3/shark.mp3" />
+  <animal name="shrimp" roar_path="lang/roar/animal3/shrimp.mp3" />
+  <animal name="starfish" roar_path="lang/roar/animal3/starfish.mp3" />
+  <animal name="swan" roar_path="lang/roar/animal3/swan.mp3" />
+  <animal name="walrus" roar_path="lang/roar/animal3/walrus.mp3" />
+  <animal name="whale" roar_path="lang/roar/animal3/whale.mp3" />
+  <animal name="beetle" roar_path="lang/roar/animal4/beetle.mp3" />
+  <animal name="butterfly" roar_path="lang/roar/animal4/butterfly.mp3" />
+  <animal name="cock" roar_path="lang/roar/animal4/cock.mp3" />
+  <animal name="cockroach" roar_path="lang/roar/animal4/cockroach.mp3" />
+  <animal name="crane" roar_path="lang/roar/animal4/crane.mp3" />
+  <animal name="crow" roar_path="lang/roar/animal4/crow.mp3" />
+  <animal name="dragonfly" roar_path="lang/roar/animal4/dragonfly.mp3" />
+  <animal name="eagle" roar_path="lang/roar/animal4/eagle.mp3" />
+  <animal name="fly" roar_path="lang/roar/animal4/fly.mp3" />
+  <animal name="ladybrid" roar_path="lang/roar/animal4/ladybrid.mp3" />
+  <animal name="locust" roar_path="lang/roar/animal4/locust.mp3" />
+  <animal name="mantis" roar_path="lang/roar/animal4/mantis.mp3" />
+  <animal name="ant" roar_path="lang/roar/animal4/ant.mp3" />
+  <animal name="bee" roar_path="lang/roar/animal4/bee.mp3" />
+  <animal name="mosquito" roar_path="lang/roar/animal4/mosquito.mp3" />
+  <animal name="hen" roar_path="lang/roar/animal4/hen.mp3" />
+  <animal name="brid" roar_path="lang/roar/animal4/brid.mp3" />
+  <animal name="ostrich" roar_path="lang/roar/animal4/ostrich.mp3" />
+  <animal name="owl" roar_path="lang/roar/animal4/owl.mp3" />
+  <animal name="parrot" roar_path="lang/roar/animal4/parrot.mp3" />
+  <animal name="peacock" roar_path="lang/roar/animal4/peacock.mp3" />
+  <animal name="pigeon" roar_path="lang/roar/animal4/pigeon.mp3" />
+  <animal name="snail" roar_path="lang/roar/animal4/snail.mp3" />
+  <animal name="spider" roar_path="lang/roar/animal4/spider.mp3" />
+</roar>
+
+</all>
+
+
+

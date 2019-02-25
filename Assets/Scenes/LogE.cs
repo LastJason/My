@@ -4,11 +4,230 @@ using UnityEngine;
 
 public class LogE : SingletonMono<LogE>
 {
-    /*
-     * #LOG_SCREEN  打印到屏幕
-     * #LOG_FILE    打印到文件
-     */
+    //public methods
+    public void LogToScreen(bool isopen, bool iscollapse, LogPriority priority)
+    {
+        IsLogScreen = isopen;
+        _isLogScreenCollapse = iscollapse;
+        logScreenPriority = priority;
+    }
 
+    public void LogToFile(bool isopen, bool iscollapse, LogPriority priority)
+    {
+        IsLogFile = isopen;
+        _isLogFileCollapse = iscollapse;
+        logFilePriority = priority;
+    }
+
+    /// <summary>
+    /// 是否输出到屏幕
+    /// </summary>
+    private bool _isLogScreen = false;
+    public bool IsLogScreen
+    {
+        get { return _isLogScreen; }
+        private set
+        {
+            if (value==_isLogScreen)
+            {
+                return;
+            }
+            _isLogScreen = value;
+            InitScreen(_isLogScreen);
+        }
+    }
+
+    /// <summary>
+    /// 是否输出到文件
+    /// </summary>
+    private bool _isLogFile = false;
+    public bool IsLogFile
+    {
+        get { return _isLogFile; }
+        private set
+        {
+            if (value==_isLogFile)
+            {
+                return;
+            }
+            _isLogFile = value;
+            InitFile(_isLogFile);
+        }
+    }
+
+    //----------------------------------------------------------------------------------------------------
+    #region LogToScreen 开始->接收->绘制->是否去重->刷新
+    /// <summary>
+    /// 是否需要合并相同
+    /// </summary>
+    private bool _isLogScreenCollapse = false;
+
+    /// <summary>
+    /// 记录输出类型
+    /// </summary>
+    private LogPriority logScreenPriority = LogPriority.All;
+    /// <summary>
+    /// 开始记录初始化
+    /// </summary>
+    /// <param name="isStart"></param>
+    private void InitScreen(bool isStart)
+    {
+        if (isStart)
+        {
+            logCollapseList.Clear();
+            logScreenList.Clear();
+            Application.logMessageReceived += HandleScreenLog;
+        }
+        else
+            Application.logMessageReceived -= HandleScreenLog;
+    }
+
+    /// <summary>
+    /// 所有记录列表
+    /// </summary>
+    /// <typeparam name="LogData"></typeparam>
+    /// <returns></returns>
+    private List<LogData> logScreenList = new List<LogData>();
+
+    /// <summary>
+    /// 不重复记录列表
+    /// </summary>
+    /// <typeparam name="LogData"></typeparam>
+    /// <returns></returns>
+    private List<LogData> logCollapseList = new List<LogData>();
+
+    /// <summary>
+    /// 滑动条
+    /// </summary>
+    private Vector2 scrollPosition;
+
+    /// <summary>
+    /// 处理接收消息记录   
+    /// </summary>
+    /// <param name="condition"></param>
+    /// <param name="stackTrace"></param>
+    /// <param name="type"></param>
+    private void HandleScreenLog(string condition, string stackTrace, LogType type)
+    {
+        //Log优先级是否达到标准
+        int priority = (int)logPriorityDic[type];
+        if (priority > (int)logScreenPriority)
+        {
+            return;
+        }
+
+        LogData log = new LogData(condition, stackTrace, type);
+        logScreenList.Add(log);
+
+        if (!logCollapseList.Contains(log))
+        {
+            logCollapseList.Add(log);
+        }
+    }
+
+    /// <summary>
+    /// 绘制
+    /// </summary>
+    private void OnGUI()
+    {
+        if (!IsLogScreen)
+        {
+            return;
+        }
+        GUILayout.Window(123456, new Rect(0, 0, 250, 500), DrawWindow, "");
+    }
+
+    private void DrawWindow(int windowId)
+    {
+        scrollPosition = GUILayout.BeginScrollView(scrollPosition);
+        var list = _isLogScreenCollapse ? logCollapseList : logScreenList;
+        ShowLog(list);
+        GUILayout.EndScrollView();
+
+        if (GUILayout.Button("Clear"))
+        {
+            logCollapseList.Clear();
+            logScreenList.Clear();
+        }
+    }
+
+    private void ShowLog(List<LogData> list)
+    {
+        foreach (var item in list)
+        {
+            GUI.contentColor = logTypeColorsDic[item.type];
+            GUILayout.Label(item.message);
+        }
+    }
+    #endregion
+
+    //----------------------------------------------------------------------------------------------------
+    #region LogToFile 开始->接收->是否去重->写入
+
+    /// <summary>
+    /// 是否需要合并相同
+    /// </summary>
+    private bool _isLogFileCollapse = true;
+
+    /// <summary>
+    /// 记录输出类型
+    /// </summary>
+    private LogPriority logFilePriority = LogPriority.All;
+
+    /// <summary>
+    /// 开始记录初始化
+    /// </summary>
+    /// <param name="isStart"></param>
+    private void InitFile(bool isStart)
+    {
+        if (isStart)
+        {
+            logFileList.Clear();
+            Application.logMessageReceived += HandleFileLog;
+        }
+        else
+            Application.logMessageReceived -= HandleFileLog;
+    }
+
+    /// <summary>
+    /// 所有记录列表
+    /// </summary>
+    /// <typeparam name="LogData"></typeparam>
+    /// <returns></returns>
+    private List<LogData> logFileList = new List<LogData>();
+
+    /// <summary>
+    /// 处理接收消息记录   
+    /// </summary>
+    /// <param name="condition"></param>
+    /// <param name="stackTrace"></param>
+    /// <param name="type"></param>
+    private void HandleFileLog(string condition, string stackTrace, LogType type)
+    {
+        //Log优先级是否达到标准
+        int priority = (int)logPriorityDic[type];
+        if (priority > (int)logFilePriority)
+        {
+            return;
+        }
+
+        LogData log = new LogData(condition, stackTrace, type);
+        if (_isLogFileCollapse && logFileList.Contains(log))
+        {
+            return;
+        }
+
+        logFileList.Add(log);
+        FileMgr.Instance.WriteLog(log.message);
+    }
+
+    #endregion
+
+    //----------------------------------------------------------------------------------------------------
+    #region LogData 日志数据结构体
+    /// <summary>
+    /// LogData
+    /// </summary>
     private struct LogData
     {
         public string message;
@@ -24,106 +243,35 @@ public class LogE : SingletonMono<LogE>
     }
 
     /// <summary>
-    /// 输出屏幕
+    /// 记录颜色类型
     /// </summary>
-    public bool IsLogScreen { get; set; } = false;
+    /// <value></value>
+    private Dictionary<LogType, Color> logTypeColorsDic = new Dictionary<LogType, Color> {
+        { LogType.Assert, Color.white },
+        { LogType.Error, Color.red },
+        { LogType.Exception, Color.red },
+        { LogType.Log, Color.white },
+        { LogType.Warning, Color.yellow },
+    };
 
     /// <summary>
-    /// 输出日志
+    /// 记录优先级类型
     /// </summary>
-    public bool IsLogFile { get; set; } = false;
+    /// <value></value>
+    private Dictionary<LogType, int> logPriorityDic = new Dictionary<LogType, int>{
+        { LogType.Assert, 5 },
+        { LogType.Warning, 4 },
+        { LogType.Log, 3},
+        { LogType.Error,2 },
+        { LogType.Exception, 1 },
+    };
 
-    /// <summary>
-    /// 合并相同
-    /// </summary>
-    public bool IsLogCollapse { get; set; } = false;
-
-
-    private List<LogData> logList = new List<LogData>();
-
-    private void OnEnable()
+    public enum LogPriority
     {
-        Application.logMessageReceived += HandleLog;
+        Exception = 1,
+        Error = 2,      //Exception + Error
+        All = 3,        //Exception + Error + Log (not include Warning and Assert)
     }
-
-    private void OnDisable()
-    {
-        Application.logMessageReceived -= HandleLog;
-    }
-
-    private void HandleLog(string condition, string stackTrace, LogType type)
-    {
-        logList.Add(new LogData(condition, stackTrace, type));
-    }
-
-    private void Update()
-    {
-        if (IsLogScreen)
-        {
-
-        }
-
-        if (IsLogFile)
-        {
-
-        }
-
-    }
-
-
-    #region LogToScreen
-
-    private Vector2 scrollPosition;
-
-    private static Dictionary<LogType, Color> logTypeColors = new Dictionary<LogType, Color>
-        {  
-            { LogType.Assert, Color.white },
-            { LogType.Error, Color.red },
-            { LogType.Exception, Color.red },
-            { LogType.Log, Color.white },
-            { LogType.Warning, Color.yellow },
-        };
-
-    private void OnGUI()
-    {
-        if (!IsLogScreen)
-        {
-            return;
-        }
-        GUILayout.Window(123456, new Rect(0, 0, 250, 500), DrawWindow, "");
-    }
-
-    private void DrawWindow(int windowId)
-    {
-        scrollPosition = GUILayout.BeginScrollView(scrollPosition);
-
-        for (var i = 0; i < logList.Count; i++)
-        {
-            var log = logList[i];
-            if (i > 0 && IsLogCollapse)
-            {
-                var previousMessage = logList[i - 1].message;
-
-                if (log.message == previousMessage)
-                {
-                    continue;
-                }
-            }
-
-            GUI.contentColor = logTypeColors[log.type];
-            GUILayout.Label(log.message);
-        }
-
-        GUILayout.EndScrollView();
-    }
-
-    #endregion
-
-    #region LogToFile
-
-    //文件位置
-
-
 
     #endregion
 }

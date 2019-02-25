@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class TestScript : MonoBehaviour
 {
+    public TextAsset text;
+
     // Start is called before the first frame update
+        int a = 1;
     void Start()
     {
         InvokeRepeating("Console", 5, 2);
@@ -15,14 +18,13 @@ public class TestScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //Test.Instance.Demo();
-            LogE.Instance.IsLogScreen = true;
         }
+
     }
 
     void Console()
     {
-        Debug.LogError("q");
-        Debug.Log("w");
+        Debug.LogError(a.ToString());
+        a++;
     }
 }

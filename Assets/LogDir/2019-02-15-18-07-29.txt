@@ -1,0 +1,1 @@
+﻿Unable to open Assets/LogDir/1.txt: Check external application preferences.
