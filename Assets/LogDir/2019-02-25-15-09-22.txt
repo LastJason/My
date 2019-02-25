@@ -1,0 +1,12 @@
+﻿HANDLE
+False
+HANDLE
+True
+HANDLE
+True
+HANDLE
+9
+HANDLE
+10
+HANDLE
+11
