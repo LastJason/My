@@ -217,7 +217,6 @@ public class LogMgr : SingletonMono<LogMgr>
     /// <param name="type"></param>
     private void HandleFileLog(string condition, string stackTrace, LogType type)
     {
-        Debug.LogError("HANDLE");
         //Log优先级是否达到标准
         int priority = (int)logPriorityDic[type];
         if (priority > (int)logFilePriority)
