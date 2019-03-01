@@ -38,5 +38,6 @@ public class TestScript : MonoBehaviour
     {
         Debug.LogError(a.ToString());
         a++;
+        
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LogMgr : SingletonMono<LogMgr>
+public class LogMgr : Singleton<LogMgr>
 {
     //public methods 
     /// <summary>
