@@ -4,84 +4,80 @@ using UnityEngine;
 
 public class PoolBase : MonoBehaviour
 {
+    #region Private members
+
     /// <summary>
     /// 对象池id
     /// </summary>
-    protected string _name;
+    private string _name;
 
     /// <summary>
     /// 对象池trans
     /// </summary>
-    protected Transform _trans;
+    private Transform _trans;
 
     /// <summary>
     /// 对象池预制体
     /// </summary>
-    protected GameObject _prefab;
+    private GameObject _prefab;
 
     /// <summary>
     /// 预制体列表
     /// </summary>
-    protected List<Transform> _list;
+    private List<Transform> _list;
 
     /// <summary>
     /// 预制体初始数
     /// </summary>
-    protected int _numinit;
+    private int _numinit = 1;
 
     /// <summary>
     /// 预制体最大数
     /// </summary>
-    protected int _nummax = 4;
+    private int _nummax = 50;
 
     /// <summary>
-    /// 销毁预制体时间间隔
+    /// 销毁预制体单次最大个数
     /// </summary>
-    protected float _timecleargap = 1;
+    private int _numcleargap = 9999;
 
     /// <summary>
-    /// 销毁预制体每次个数
+    /// 正在销毁预制体
     /// </summary>
-    protected int _numcleargap=3;
+    private bool _isInDs = false;
+
+    #endregion
+
+
+    #region public methods
 
     /// <summary>
-    /// 待拓展 拓展构造函数
-    /// </summary>
-    /// <param name="name"></param>
-    /// <param name="parent"></param>
-    /// <param name="prefab"></param>
-    /// <param name="maxnum"></param>
-    public PoolBase(string name, Transform parent, GameObject prefab, int maxnum)
-    {
-        Init(name, parent, prefab, maxnum);
-    }
-
-    /// <summary>
-    /// 初始化
+    /// 缓存池初始化
     /// </summary>
     /// <param name="name"></param>
     /// <param name="parent"></param>
     /// <param name="prefab"></param>
-    /// <param name="maxnum"></param>
-    private void Init(string name, Transform parent, GameObject prefab, int maxnum)
+    /// <param name="initnum"></param>
+    public void Init(string name, Transform parent, GameObject prefab, int initnum)
     {
-        //创建
+        this.transform.name = name;
+        this.transform.SetParent(parent);
+
         _name = name;
-        _prefab = prefab;
-        _nummax = maxnum;
+        _trans = this.transform;
+
         _list = new List<Transform>();
+        _prefab = prefab;
+        _numinit = initnum;
 
-        GameObject obj = new GameObject();
-        _trans = obj.transform;
-        _trans.SetParent(parent);
+        _Preload();
     }
-
 
     /// <summary>
     /// 取物体
     /// </summary>
     /// <returns></returns>
-    public virtual Transform Get(Transform parent, Vector3 pos, Quaternion rot, Vector3 scale)
+    public Transform Get(Transform parent, Vector3 pos, Quaternion rot, Vector3 scale)
     {
         Transform trans;
         if (_list.Count > 0)
@@ -92,6 +88,7 @@ public class PoolBase : MonoBehaviour
         else
         {
             trans = GameObject.Instantiate(_prefab).transform;
+            trans.name = _prefab.name;
         }
 
         trans.SetParent(parent);
@@ -101,13 +98,29 @@ public class PoolBase : MonoBehaviour
         return trans;
     }
 
+    public Transform Get(Vector3 pos, Quaternion rot, Vector3 scale)
+    {
+        return Get(null, pos, rot, scale);
+    }
+
+    public Transform Get(Vector3 pos)
+    {
+        return Get(null, pos, Quaternion.identity, Vector3.one);
+    }
+
+    public Transform Get()
+    {
+        return Get(null, Vector3.zero, Quaternion.identity, Vector3.one);
+    }
+
     /// <summary>
     /// 放物体
     /// </summary>
     /// <param name="obj"></param>
-    public virtual void Put(GameObject obj)
+    public void Put(GameObject obj)
     {
         obj.SetActive(false);
+        obj.transform.parent = _trans;
         _list.Add(obj.transform);
 
         _DestroyOnTime();
@@ -116,114 +129,103 @@ public class PoolBase : MonoBehaviour
     /// <summary>
     /// 清空对象池
     /// </summary>
-    public virtual void Clear()
+    public void Clear()
     {
-        _list.Clear();
-        for (int i = 0; i < _trans.childCount; i++)
+        if (_isInDs)
         {
-            Destroy(_trans.GetChild(i));
+            StopCoroutine("_CoDestroy");
+        }
+        _list.Clear();
+        Destroy(_trans.gameObject);
+    }
+
+    /// <summary>
+    /// 缓存池Name
+    /// </summary>
+    public string Name
+    {
+        get { return _name; }
+    }
+
+    /// <summary>
+    /// 缓存池Trans
+    /// </summary>
+    public Transform Trans
+    {
+        get { return _trans; }
+    }
+
+    /// <summary>
+    /// 单次销毁预制体最大个数
+    /// </summary>
+    public int ClearPerNum
+    {
+        get { return _numcleargap; }
+        set { _numcleargap = value; }
+    }
+
+    #endregion
+
+    #region private methods
+
+    /// <summary>
+    /// 预加载预制体
+    /// </summary>
+    private void _Preload()
+    {
+        Transform prefabIns;
+        for (int i = 0; i < _numinit; i++)
+        {
+            prefabIns = Instantiate(_prefab).transform;
+            prefabIns.gameObject.SetActive(false);
+            prefabIns.name = _prefab.name;
+            prefabIns.parent = _trans;
+            _list.Add(prefabIns);
         }
     }
 
     /// <summary>
-    /// 检测销毁多余预制体
+    /// 检测预制体过多
     /// </summary>
     private void _DestroyOnTime()
     {
-        //_nummax = 4;
-        //_numcleargap = 3;
-        //_timecleargap = 2;
-
         if (_isInDs) return;
         if (_list.Count > _nummax)
         {
-            InvokeRepeating("_CoDestroy", 1, _timecleargap);
-            //StartCoroutine(_CoDestroy());
-        }
-    }
-
-    private bool _isInDs = false;
-
-    /// <summary>
-    /// invokerepeat实现
-    /// </summary>
-    private void _CoDestroy()
-    {
-        _isInDs = true;
-
-        int numoffset = _list.Count - _nummax;
-        bool isbreak = false;
-        if (numoffset > _numcleargap)
-        {
-            numoffset = _numcleargap;
-        }
-        else
-            isbreak = true;
-        for (int i = 0; i < numoffset; i++)
-        {
-            Destroy(_list[0].gameObject);
-            _list.Remove(_list[0]);
-        }
-
-        if (isbreak) {
-            _isInDs = false;
-            CancelInvoke("_CoDestroy");
+            _isInDs = true;
+            StartCoroutine("_CoDestroy");
         }
     }
 
     /// <summary>
-    /// 协程实现
+    /// 删除多余预制体
     /// </summary>
     /// <returns></returns>
-    //private IEnumerator _CoDestroy()
-    //{
-    //    _isInDs = true;
-    //    while (true)
-    //    {
-    //        yield return new WaitForSeconds(_timecleargap);
-    //        //删除
-    //        int numoffset = _list.Count - _nummax;
-    //        bool isbreak = false;
-    //        if (numoffset > _numcleargap)
-    //        {
-    //            numoffset = _numcleargap;
-    //        }
-    //        else
-    //            isbreak = true;
-    //        for (int i = 0; i < numoffset; i++)
-    //        {
-    //            Destroy(_list[0].gameObject);
-    //            _list.Remove(_list[0]);
-    //        }
-
-    //        if (isbreak) break;
-    //    }
-    //    Debug.LogError("!!!!!!!!!!!!!!");
-    //    _isInDs = false;
-    //}
-
-    private void Start()
+    private IEnumerator _CoDestroy()
     {
-        //_list = new List<Transform>();
-        //_list.Add(Camera.main.transform);
-        //_list.Add(Camera.main.transform);
-        //_list.Add(Camera.main.transform);
-        //_list.Add(Camera.main.transform);
-        //_list.Add(Camera.main.transform);
-        //_list.Add(Camera.main.transform);
-        //_list.Add(Camera.main.transform);
-        //_list.Add(Camera.main.transform);
-        //_list.Add(Camera.main.transform);
-        //_list.Add(Camera.main.transform);
-        //_list.Add(Camera.main.transform);
-        //_list.Add(Camera.main.transform);
-        //_list.Add(Camera.main.transform);
-        //_list.Add(Camera.main.transform);
-        //_list.Add(Camera.main.transform);
-        //_list.Add(Camera.main.transform);
-        //_list.Add(Camera.main.transform);
-        //_list.Add(Camera.main.transform);
-        //_DestroyOnTime();
+        while (true)
+        {
+            int numoffset = _list.Count - _nummax;
+            if (numoffset >= _numcleargap)
+            {
+                numoffset = _numcleargap;
+            }
 
+            for (int i = 0; i < numoffset; i++)
+            {
+                Destroy(_list[0].gameObject);
+                _list.Remove(_list[0]);
+            }
+            if (_list.Count <= _nummax)
+            {
+                break;
+            }
+        }
+
+        Debug.Log("PoolBase:_CoDestroy");
+        _isInDs = false;
+        yield return null;
     }
+
+    #endregion
 }

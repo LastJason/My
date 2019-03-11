@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class TestScript : MonoBehaviour
 {
+    GameObject prefab;
+    PoolBase pool;
+
     void Start()
     {
-        LogMgr.Instance.LogToScreen(true, false, LogMgr.LogPriority.All);
-        LogMgr.Instance.LogToFile(true, false, LogMgr.LogPriority.All);
+        prefab = Resources.Load<GameObject>("Cube");
     }
 
     bool screen = true;
@@ -17,27 +19,24 @@ public class TestScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("---------Start-------");
-            InvokeRepeating("Console", 5, 2);
+            pool = PoolMgr.Instance.Create("mmmm", prefab, 3);
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
-            screen = !screen;
-            LogMgr.Instance.LogToScreen(!screen, false, LogMgr.LogPriority.All);
+            PoolMgr.Instance.Remove("mmmm");
         }
 
         if (Input.GetKeyDown(KeyCode.F))
         {
-            file = !file;
-            LogMgr.Instance.LogToFile(!file, false, LogMgr.LogPriority.All);
+            pool.Get(null, Vector3.zero, Quaternion.identity, Vector3.one);
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            GameObject obj = GameObject.Find("Cube");
+            pool.Put(obj);
         }
     }
 
-    int a = 1;
-    void Console()
-    {
-        Debug.LogError(a.ToString());
-        a++;
-        
-    }
 }
