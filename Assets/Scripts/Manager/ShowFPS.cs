@@ -17,7 +17,7 @@ public class ShowFPS : SingletonMono<ShowFPS>
     private float _timeframes;
 
     //开始
-    private bool _isstart = false;
+    private bool _isstart = true;
     public bool Isstart
     {
         get { return _isstart; }

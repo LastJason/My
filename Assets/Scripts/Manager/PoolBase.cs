@@ -9,41 +9,49 @@ public class PoolBase : MonoBehaviour
     /// <summary>
     /// 对象池id
     /// </summary>
+    [SerializeField]
     private string _name;
 
     /// <summary>
     /// 对象池trans
     /// </summary>
+    [SerializeField]
     private Transform _trans;
 
     /// <summary>
     /// 对象池预制体
     /// </summary>
+    [SerializeField]
     private GameObject _prefab;
 
     /// <summary>
     /// 预制体列表
     /// </summary>
+    [SerializeField]
     private List<Transform> _list;
 
     /// <summary>
     /// 预制体初始数
     /// </summary>
+    [SerializeField]
     private int _numinit = 1;
 
     /// <summary>
     /// 预制体最大数
     /// </summary>
+    [SerializeField]
     private int _nummax = 50;
 
     /// <summary>
     /// 销毁预制体单次最大个数
     /// </summary>
+    [SerializeField]
     private int _numcleargap = 9999;
 
     /// <summary>
     /// 正在销毁预制体
     /// </summary>
+    [SerializeField]
     private bool _isInDs = false;
 
     #endregion

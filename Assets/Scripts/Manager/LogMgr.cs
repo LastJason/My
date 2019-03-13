@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class LogMgr : Singleton<LogMgr>
 {
-    //public methods 
+
+    #region public methods
     /// <summary>
     /// 开启打印到屏幕 若已经开启 则无操作
     /// </summary>
@@ -31,7 +34,8 @@ public class LogMgr : Singleton<LogMgr>
         logFilePriority = priority;
     }
 
-    //----------------------------------------------------------------------------------------------------
+    #endregion
+
     #region LogToScreen 开始->接收->绘制->是否去重->刷新
 
     /// <summary>
@@ -156,7 +160,6 @@ public class LogMgr : Singleton<LogMgr>
     }
     #endregion
 
-    //----------------------------------------------------------------------------------------------------
     #region LogToFile 开始->接收->是否去重->写入
 
     /// <summary>
@@ -231,12 +234,58 @@ public class LogMgr : Singleton<LogMgr>
         }
 
         logFileList.Add(log);
-        FileMgr.Instance.WriteLog(log.message);
+        WriteLog(log.message);
     }
 
     #endregion
 
-    //----------------------------------------------------------------------------------------------------
+    #region log file write
+
+    private string _filepath;
+    protected override void Init()
+    {
+        string dirpath = StaticConst.LogDirectory;
+        string filename = Tools.GetDataTime() + ".txt";
+
+        if (!Directory.Exists(dirpath))
+        {
+            Directory.CreateDirectory(dirpath);
+        }
+
+        _filepath = dirpath + "\\" + filename;
+        int filemaxnum = StaticConst.LogFileMaxNum;
+
+        FileExistNum(filemaxnum);
+    }
+
+    private void WriteLog(string log)
+    {
+        using (StreamWriter sw = new StreamWriter(_filepath, true, System.Text.Encoding.UTF8))
+        {
+            sw.WriteLine(Tools.GetDataTime() + ": " + log);
+            sw.Flush();
+            sw.Close();
+        }
+    }
+
+    private void FileExistNum(int max)
+    {
+        try
+        {
+            string[] files = Directory.GetFiles(_filepath);
+            for (int i = 0; i < files.Length - max - 1; i++)
+            {
+                File.Delete(files[i]);
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("[EXCEPTION_FILEEXISTNUM]:" + e);
+        }
+    }
+
+    #endregion
+
     #region LogData 日志数据结构体
 
     /// <summary>
