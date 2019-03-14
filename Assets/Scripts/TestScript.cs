@@ -12,8 +12,6 @@ public class TestScript : MonoBehaviour
         prefab = Resources.Load<GameObject>("Cube");
     }
 
-    bool screen = true;
-    bool file = true;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
