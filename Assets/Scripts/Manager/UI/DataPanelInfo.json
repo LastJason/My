@@ -1,0 +1,12 @@
+{
+"infoList":
+[
+{"Typestr":"ItemMessage","Path":"UIPanel/ItemMessagePanel"},
+{"Typestr":"Knapsack","Path":"UIPanel/KnapsackPanel"},
+{"Typestr":"MainMenu","Path":"UIPanel/PanelMain"},
+{"Typestr":"Shop","Path":"UIPanel/ShopPanel"},
+{"Typestr":"Skill","Path":"UIPanel/SkillPanel"},
+{"Typestr":"System","Path":"UIPanel/SystemPanel"},
+{"Typestr":"Task","Path":"UIPanel/PanelTask"}
+]
+}

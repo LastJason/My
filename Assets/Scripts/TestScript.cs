@@ -10,6 +10,9 @@ public class TestScript : MonoBehaviour
     void Start()
     {
         prefab = Resources.Load<GameObject>("Cube");
+
+
+        //UIMgr.Instance.ShowPanel(PanelType.Task);
     }
 
     void Update()
@@ -17,17 +20,17 @@ public class TestScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("---------Start-------");
-            pool = PoolMgr.Instance.Create("mmmm", prefab, 3);
+            UIMgr.Instance.ShowPanel(PanelType.MainMenu);
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
-            PoolMgr.Instance.Remove("mmmm");
+            UIMgr.Instance.ClosePanel();
         }
 
         if (Input.GetKeyDown(KeyCode.F))
         {
-            pool.Get(null, Vector3.zero, Quaternion.identity, Vector3.one);
+            UIMgr.Instance.ShowPanel(PanelType.Task);
         }
 
         if (Input.GetKeyDown(KeyCode.P))

@@ -9,4 +9,7 @@ public class StaticConst
     public static string LogDirectory = Application.dataPath + "/Log";
     // 日志文件个数
     public static int LogFileMaxNum = 3;
+
+    // UI面板文件路径
+    public static string PanelInfoPath = Application.dataPath + "/Scripts/Manager/UI/DataPanelInfo.json";
 }
