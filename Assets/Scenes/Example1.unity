@@ -1234,7 +1234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370336427}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.21, y: 0.98, z: 18.24}
+  m_LocalPosition: {x: 10.9, y: 0, z: 9.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1947,8 +1947,6 @@ GameObject:
   - component: {fileID: 1943285364}
   - component: {fileID: 1943285363}
   - component: {fileID: 1943285368}
-  - component: {fileID: 1943285369}
-  - component: {fileID: 1943285370}
   - component: {fileID: 1943285371}
   m_Layer: 0
   m_Name: Main Camera
@@ -2005,7 +2003,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 31.4
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2031,7 +2029,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943285362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 92.913, z: -126.03}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2062,50 +2060,6 @@ MonoBehaviour:
   effectShader: {fileID: 4800000, guid: de59591eb7a71f742a1a396afaf86032, type: 3}
   blurShader: {fileID: 4800000, guid: 5401191c1440b294aaa32c0c975fb5d6, type: 3}
   minimapRenderShader: {fileID: 0}
---- !u!114 &1943285369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1943285362}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2ec2b96de5640e42a622fc3064f1c80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Target: {fileID: 1370336432}
-  m_AutoTargetPlayer: 1
-  m_UpdateType: 0
-  targetRigidbody: {fileID: 0}
-  m_RotationRange: {x: 90, y: 360}
-  m_FollowSpeed: 0.1
-  m_FollowAngles: {x: 0, y: 0, z: 0}
-  m_OriginalRotation: {x: 0, y: 0, z: 0, w: 0}
-  m_FollowVelocity: {x: 0, y: 0, z: 0}
---- !u!114 &1943285370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1943285362}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a62942d9af3f36d448094c6ed1f214dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Target: {fileID: 1370336432}
-  m_AutoTargetPlayer: 1
-  m_UpdateType: 0
-  targetRigidbody: {fileID: 0}
-  m_FovAdjustTime: 1
-  m_ZoomAmountMultiplier: 2
-  m_IncludeEffectsInSize: 0
-  m_BoundSize: 0
-  m_FovAdjustVelocity: 0
-  m_Cam: {fileID: 0}
-  m_LastTarget: {fileID: 0}
 --- !u!114 &1943285371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2119,8 +2073,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1370336432}
-  relativePos: {x: 50, y: 50, z: 0}
-  dis: 38.2
+  relativePos: {x: 0, y: 15, z: -9}
+  dis: 20
   fieldtime: 0.6
 --- !u!1 &1998184376
 GameObject:

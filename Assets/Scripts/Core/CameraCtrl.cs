@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraCtrl : MonoBehaviour
 {
     public Transform target;
-    public Vector3 relativePos = new Vector3(-20, 30, 15);
+    public Vector3 relativePos = new Vector3(0, 15, -9);
     [Range(2,50)]
     public float dis = 20;
     public float fieldtime = 0.6f;
