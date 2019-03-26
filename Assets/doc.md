@@ -4,7 +4,11 @@
 
 -   manager：mono app 初始化awake 
 -   gamemgr：start
--   
+
+
+
+-   如果第一人称视角 就不需要进行战争迷雾设计了
+-   俯视上帝视角 上下左右 
 
 
 
